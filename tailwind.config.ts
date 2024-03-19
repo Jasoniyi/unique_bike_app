@@ -9,9 +9,12 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        home_banner: "url('/banner.svg')",
+      },
+      colors: {
+        bikeBlack: "var(--bike-black)",
+        bikeRed: "var(--bike-red)",
+        bikeRedText: "var(--bike-red-text)",
       },
     },
   },
