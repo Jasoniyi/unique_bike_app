@@ -6,6 +6,7 @@ import { productImages } from "./constants/imagePaths";
 import Siamese from "./components/SiameseModel/Siamese";
 import ComingSoon from "./components/comingSoon/ComingSoon";
 import FollowUs from "./components/followUs/FollowUs";
+import Footer from "./components/footer/Footer";
 
 export default function Home() {
   return (

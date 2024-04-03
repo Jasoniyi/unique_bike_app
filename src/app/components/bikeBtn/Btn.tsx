@@ -12,7 +12,7 @@ const Btn = ({ title, outline, color }: BtnShape) => {
     <div
       className={`${BarlowCon200.className} uppercase ${
         outline ? "outline outline-1" : null
-      }  p-2 ${color}  `}
+      }  p-2 ${color} text-xs md:text-sm  `}
     >
       {title}
     </div>

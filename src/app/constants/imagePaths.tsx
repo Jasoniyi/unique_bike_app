@@ -53,4 +53,15 @@ export const productImages: ImageShape = {
     "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710700009/uniqueBikes/Rockhopper_Sport_nhsken.webp",
   marlin:
     "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710700009/uniqueBikes/Marlin_6_Gen_2_lbeswm.webp",
+
+  // shop
+  jersey:
+    "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710677128/uniqueBikes/jersey_yi2kh7.svg",
+  shoe: "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710677132/uniqueBikes/shoe_eulmfx.svg",
+  all_accessories:
+    "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710677031/uniqueBikes/accessories_jcahiy.svg",
+  helmet:
+    "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710677127/uniqueBikes/helme_evkkbw.svg",
+  spare_part:
+    "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710677132/uniqueBikes/sparePart_hgeoqx.svg",
 };
