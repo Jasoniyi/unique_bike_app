@@ -27,7 +27,7 @@ const Model = ({ title, image }: ModelShape) => {
           <span className="border border-1 w-28 ml-40 md:ml-3 border-black"></span>
         </div>
       </div>
-      <div className="col-span-3 h-[22em] mt-10 md:mt-0 md:h-[42em] relative">
+      <div className="col-span-3 h-[22em] mt-10 md:mt-0 md:h-[48em] relative">
         <div className="flex md:justify-end">
           <Image src={image} alt="Sphynx" fill />
         </div>
