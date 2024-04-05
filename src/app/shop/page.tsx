@@ -9,12 +9,11 @@ interface ShopShape {
   image: string;
 }
 
-const page = () => {
+const ShopPage = () => {
   const shopItems: ShopShape[] = [
     {
       name: "jersey",
       image: `${productImages.jersey}`,
-      //   image: `${jersy}`,
     },
     {
       name: "shoe",
@@ -58,4 +57,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ShopPage;
