@@ -51,7 +51,9 @@ const Navbar = () => {
             </div>
             <div className="flex space-x-8">
               <ShoppingCartIcon />
-              <AccountCircleOutlinedIcon />
+              <Link href={"/login"}>
+                <AccountCircleOutlinedIcon />
+              </Link>
             </div>
           </div>
         </div>
