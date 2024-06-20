@@ -1,12 +1,11 @@
 import Image from "next/image";
 import { BarlowCon600, Rob } from "./Fonts/fonts";
-import Btn from "./components/bikeBtn/Btn";
-import Model from "./components/BikeModel/Model";
+import Btn from "../components/bikeBtn/Btn";
+import Model from "../components/BikeModel/Model";
 import { productImages } from "./constants/imagePaths";
-import Siamese from "./components/SiameseModel/Siamese";
-import ComingSoon from "./components/comingSoon/ComingSoon";
-import FollowUs from "./components/followUs/FollowUs";
-import Footer from "./components/footer/Footer";
+import Siamese from "../components/SiameseModel/Siamese";
+import ComingSoon from "../components/comingSoon/ComingSoon";
+import FollowUs from "../components/followUs/FollowUs";
 
 export default function Home() {
   return (

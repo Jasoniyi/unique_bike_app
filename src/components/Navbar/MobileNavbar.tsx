@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Rob } from "@/app/Fonts/fonts";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MenuOpenOutlinedIcon from "@mui/icons-material/MenuOpenOutlined";
-import Logo from "../../../../public/logo.svg";
+import Logo from "../../../public/logo.svg";
 import Image from "next/image";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";

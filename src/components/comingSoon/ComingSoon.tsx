@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import { productImages } from "../../constants/imagePaths";
-import { BarlowCon200 } from "../../Fonts/fonts";
+import { productImages } from "../../app/constants/imagePaths";
+import { BarlowCon200 } from "../../app/Fonts/fonts";
 
 const ComingSoon = () => {
   return (
