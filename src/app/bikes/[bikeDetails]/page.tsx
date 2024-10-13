@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { productData } from "../../../data/data"; // Import your product data
 import { Barl } from "../../Fonts/fonts";
@@ -10,6 +10,7 @@ import Image from "next/image";
 import { productImages } from "../../constants/imagePaths";
 import { BarlowCon600 } from "../../Fonts/fonts";
 import FollowUs from "@/components/followUs/FollowUs";
+//import { getBase64 } from "@/app/constants/getLocalBase64";
 
 const BikeDetails = () => {
   const addToCart = useCartStore((state) => state.addToCart);
@@ -17,12 +18,13 @@ const BikeDetails = () => {
   console.log(params, "params");
   const productId = params.bikeDetails; // Using parseInt to get your number
 
-  console.log(productId, "params");
+  // Still call useState outside of any condition
+  const [activeTab, setActiveTab] = useState("description");
 
   // Find the product from productData based on productId
   const product = productData.find((product) => product.id === productId);
 
-  // If product is not found, you can handle it accordingly
+  // After all hooks, handle the product not found case
   if (!product) {
     return <p>Product not found</p>;
   }
@@ -42,8 +44,6 @@ const BikeDetails = () => {
       title: "frame",
     },
   ];
-
-  const [activeTab, setActiveTab] = useState("description");
 
   return (
     <div className="overflow-x-hidden">
@@ -75,6 +75,7 @@ const BikeDetails = () => {
                     title={item}
                     outline
                     classname="px-6 py-1 hover:bg-[#1E1E1E]"
+                    key={`btn-${i}`}
                   />
                 ))}
               </div>
