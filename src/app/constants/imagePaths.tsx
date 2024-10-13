@@ -1,5 +1,5 @@
 interface ImageShape {
-  [key: string]: string;
+  [key: string]: any;
 }
 
 export const productImages: ImageShape = {

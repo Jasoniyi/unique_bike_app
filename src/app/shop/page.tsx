@@ -1,8 +1,9 @@
+"use client";
+
 import React from "react";
 import { BarlowCon600 } from "../Fonts/fonts";
 import { productImages } from "../constants/imagePaths";
-import Image from "next/image";
-import jersy from "../../../public/jersey.svg";
+import BlurImage from "../blurImage/BlurImage";
 
 interface ShopShape {
   name: string;
@@ -11,31 +12,17 @@ interface ShopShape {
 
 const ShopPage = () => {
   const shopItems: ShopShape[] = [
-    {
-      name: "jersey",
-      image: `${productImages.jersey}`,
-    },
-    {
-      name: "shoe",
-      image: `${productImages.shoe}`,
-    },
-    {
-      name: "all accessories",
-      image: `${productImages.all_accessories}`,
-    },
-    {
-      name: "helmet",
-      image: `${productImages.helmet}`,
-    },
-    {
-      name: "spare part",
-      image: `${productImages.spare_part}`,
-    },
+    { name: "jersey", image: productImages.jersey },
+    { name: "shoe", image: productImages.shoe },
+    { name: "all accessories", image: productImages.all_accessories },
+    { name: "helmet", image: productImages.helmet },
+    { name: "spare part", image: productImages.spare_part },
   ];
+
   return (
     <div className={`${BarlowCon600.className} pb-10`}>
       <div className="flex justify-center py-20">
-        <h1 className={` uppercase text-4xl`}>shop</h1>
+        <h1 className={`uppercase text-4xl`}>shop</h1>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8 py-8 px-16">
@@ -48,7 +35,7 @@ const ShopPage = () => {
           >
             <span className="uppercase text-3xl">{name}</span>
             <div className="w-[7em] md:w-[16em] h-[7em] md:h-[10em] relative pr-4">
-              <Image src={image} alt={name} fill />
+              <BlurImage src={image} alt={name} fill />
             </div>
           </div>
         ))}
