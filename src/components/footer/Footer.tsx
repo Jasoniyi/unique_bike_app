@@ -1,7 +1,7 @@
 import React from "react";
-import { Rob } from "../../Fonts/fonts";
+import { Rob } from "../../app/Fonts/fonts";
 import Image from "next/image";
-import Logo from "../../../../public/logo.svg";
+import Logo from "../../../public/logo.svg";
 
 const Footer = () => {
   return (

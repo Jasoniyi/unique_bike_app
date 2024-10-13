@@ -1,5 +1,5 @@
 interface ImageShape {
-  [key: string]: string;
+  [key: string]: any;
 }
 
 export const productImages: ImageShape = {
@@ -64,4 +64,12 @@ export const productImages: ImageShape = {
     "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710677127/uniqueBikes/helme_evkkbw.svg",
   spare_part:
     "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710677132/uniqueBikes/sparePart_hgeoqx.svg",
+
+  // customize
+  saddle:
+    "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710677126/uniqueBikes/customize1_lavifu.svg",
+  crank_gear:
+    "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710677126/uniqueBikes/gear_amg7hf.svg",
+  frame:
+    "https://res.cloudinary.com/dt8whfj0k/image/upload/v1710677124/uniqueBikes/frame_s2k6rr.svg",
 };

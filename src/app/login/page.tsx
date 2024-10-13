@@ -1,7 +1,7 @@
 import React from "react";
 import { BarlowCon600, BarlowCon200 } from "../Fonts/fonts";
 import { TextField, Checkbox } from "@mui/material";
-import Btn from "../components/bikeBtn/Btn";
+import Btn from "../../components/bikeBtn/Btn";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { BarlowCon600 } from "../Fonts/fonts";
 import TextField from "@mui/material/TextField";
-import Btn from "../components/bikeBtn/Btn";
+import Btn from "../../components/bikeBtn/Btn";
 
 const ContactPage = () => {
   return (

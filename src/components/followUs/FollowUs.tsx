@@ -1,7 +1,7 @@
 import React from "react";
 import Btn from "../bikeBtn/Btn";
 import Image from "next/image";
-import { productImages } from "../../constants/imagePaths";
+import { productImages } from "../../app/constants/imagePaths";
 
 const FollowUs = () => {
   return (
