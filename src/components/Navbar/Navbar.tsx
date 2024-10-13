@@ -72,7 +72,7 @@ const Navbar = () => {
             <div className="">
               <ul className="flex space-x-12 uppercase cursor-pointer">
                 {navLinks.map(({ link, title }, i) => (
-                  <Link key={i} href={link}>
+                  <Link key={`nav-${i}`} href={link}>
                     <li>{title}</li>
                   </Link>
                 ))}
