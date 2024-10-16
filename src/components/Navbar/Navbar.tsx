@@ -67,7 +67,9 @@ const Navbar = () => {
         <div className="bg-bikeBlack text-white py-4 px-16">
           <div className="flex justify-between items-center">
             <div className="">
-              <Image src={Logo} alt="logo" />
+              <Link href="/">
+                <Image src={Logo} alt="logo" />
+              </Link>
             </div>
             <div className="">
               <ul className="flex space-x-12 uppercase cursor-pointer">

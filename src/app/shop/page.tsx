@@ -25,7 +25,7 @@ const ShopPage = () => {
         <h1 className={`uppercase text-4xl`}>shop</h1>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8 py-8 px-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-4 gap-y-8 py-8 px-8">
         {shopItems.map(({ name, image }, i) => (
           <div
             key={`shop-${i}`}

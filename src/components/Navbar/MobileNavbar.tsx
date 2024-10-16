@@ -8,14 +8,32 @@ import Image from "next/image";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
 import Link from "next/link";
+import { IconButton } from "@mui/material";
+import Badge, { BadgeProps } from "@mui/material/Badge";
+import { styled } from "@mui/material/styles";
+import { useCartStore } from "../../store/useCartStore";
 
 type NavLink = {
   title: string;
   link: string;
 };
 
+const StyledBadge = styled(Badge)<BadgeProps>(({ theme }) => ({
+  "& .MuiBadge-badge": {
+    right: -3,
+    top: 13,
+    border: `1px solid ${theme.palette.background.paper}`,
+    padding: "0 4px",
+  },
+}));
+
+const WhiteShoppingCartIcon = styled(ShoppingCartIcon)(({ theme }) => ({
+  color: theme.palette.common.white,
+}));
+
 const MobileNavbar = () => {
   const [open, setOpen] = useState<boolean>(false);
+  const numberOfItems = useCartStore((state) => state.totalItems);
 
   const handleOpen = () => {
     setOpen(!open);
@@ -48,33 +66,42 @@ const MobileNavbar = () => {
     <div className={`${Rob.className} text-sm font-bold md:hidden`}>
       <div className="bg-bikeBlack flex justify-between items-center py-4 px-8 text-white">
         <div className="">
-          <Image src={Logo} alt="logo" />
+          <Link href="/" onClick={handleClose}>
+            <Image src={Logo} alt="logo" />
+          </Link>
         </div>
-        <div className="">
-          {!open ? (
-            <MenuOutlinedIcon fontSize="large" onClick={handleOpen} />
-          ) : (
-            <MenuOpenOutlinedIcon sx={{ fontSize: 40 }} onClick={handleClose} />
-          )}
+        <div className="flex items-center space-x-5">
+          <div className="flex space-x-5">
+            <IconButton aria-label="cart">
+              <StyledBadge badgeContent={numberOfItems} color="error">
+                <WhiteShoppingCartIcon />
+              </StyledBadge>
+            </IconButton>
+            <div className="mt-1">
+              <AccountCircleOutlinedIcon sx={{ fontSize: 30 }} />
+            </div>
+          </div>
+          <div className="">
+            {!open ? (
+              <MenuOutlinedIcon fontSize="large" onClick={handleOpen} />
+            ) : (
+              <MenuOpenOutlinedIcon
+                sx={{ fontSize: 40 }}
+                onClick={handleClose}
+              />
+            )}
+          </div>
         </div>
       </div>
       {open ? (
         <div className="bg-black text-white h-screen px-8 py-16">
           <ul className="flex flex-col space-y-12 uppercase text-base">
-            {/* <li>Shop</li>
-            <li>bikes</li>
-            <li>about us</li>
-            <li>contact us</li> */}
             {navLinks.map(({ link, title }, i) => (
-              <Link key={i} href={link}>
+              <Link key={i} href={link} onClick={handleClose}>
                 <li>{title}</li>
               </Link>
             ))}
           </ul>
-          <div className="mt-16 flex space-x-10">
-            <ShoppingCartIcon sx={{ fontSize: 35 }} />
-            <AccountCircleOutlinedIcon sx={{ fontSize: 35 }} />
-          </div>
         </div>
       ) : null}
     </div>
